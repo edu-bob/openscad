@@ -2,6 +2,8 @@
 
 Split.scad is an OpenSCAD module to split a model in half on the XY plane and create screw threads thread between the two parts.
 
+![Example](image.png)
+
 ## Usage
 
 The threaded portion is centered on [0,0] on the XY plane and extends in the Z plane.  THreads are cut with
