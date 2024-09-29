@@ -26,7 +26,7 @@ See the split_test module below for an example of how to use.
 split(half="bottom", diameter=14, pitch=1.5, length=8) {
       Your model, centered at origin in x, y, and z
 }
-'''
+```
 or
 ```
 split(half="top",diameter=14, pitch=1.5, length=8) {
