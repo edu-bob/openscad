@@ -14,7 +14,7 @@ The threaded portion is centered on [0,0] on the XY plane and extends in the Z p
 *half* - either "bottom" or "top" to specify which half to generate.  Ultimately you have to do both.  
 *z* - z value of where to split the model.  
 
-### Optional PArameters
+### Optional Parameters
 
 *diameter* - diameter of the threaded part, Obviously must be smaller than that part of the model.  
 *pitch* - thread pitch in mm, e.g. 1.5mm.  
@@ -29,12 +29,14 @@ The model to split.
 ### Other
 See the split_test or split_test2 module in the code for an example of how to use.
 
+This is how you generate just the bottom half:
+
 ```
 split(half="bottom", diameter=14, pitch=1.5, length=8) {
-      Your model, centered at origin in x, y, and z
+      Your model, centered at origin in x and y
 }
 ```
-or, for the top.  You need to rotate this portion in X or Y and position it on the bed
+or, for the top; you need to rotate this portion in X or Y and position it on the bed:
 ```
 translate([0,0,-MODEL_HEIGHT])
 rotate([180,0,0])
@@ -43,7 +45,7 @@ split(half="top",diameter=14, pitch=1.5, length=8) {
 }
 ```
 
-The halves of the split model are left oriented just as they were in the full model
+The halves of the split model are left oriented just as they were in the full model which is why you need to reposition the top half.
 
 ## License
 
