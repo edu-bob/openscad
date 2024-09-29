@@ -28,7 +28,7 @@
 //
 // The halves of the split model are left oriented just as they were in the full model
 // 
-module split(half="bottom", z=0, diameter=8, pitch=1, length=1, thread_slop = 0.5, reverse=false, thread_angle=45, $fn=60, MAX_XY=500, MAX_Z=500)
+module split(half="bottom", z=0, diameter=8, pitch=1, length=10, thread_slop = 0.5, reverse=false, thread_angle=45, $fn=60, MAX_XY=500, MAX_Z=500)
 {
     $fn = $fn;
     e = 0.05;
