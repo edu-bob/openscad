@@ -8,27 +8,30 @@ The threaded portion is centered on [0,0] on the XY plane and extends in the Z p
  45 degrees and shouldn't need support
 
 ### Required Parameters
-   half - either "bottom" or "top" to specify which half to generate.  Ultimately you have to do both
-   z - z value of where to split the model
+   half - either "bottom" or "top" to specify which half to generate.  Ultimately you have to do both.  
+   z - z value of where to split the model.  
 ### Optional Prameters
-   diameter - diameter of the threaded part, Obviously must be smaller than that part of the model
-   pitch - thread pitch in mm, e.g. 1.5mm
-   length = length of the threaded postion
-   thread_slop - extra doameter to make the female part of the thread, on the top piece
-   reverse - if true, place the male thread on the top piece
+   diameter - diameter of the threaded part, Obviously must be smaller than that part of the model.  
+   pitch - thread pitch in mm, e.g. 1.5mm.  
+   length = length of the threaded postion.  
+   thread_slop - extra doameter to make the female part of the thread, on the top piece.  
+   reverse - if true, place the male thread on the top piece.  
 
 ### Children
    The model to split.
    
 ### Other
-See the split_test module below for an example of how to use.
+See the split_test or split_test2 module in the code for an example of how to use.
+
 ```
 split(half="bottom", diameter=14, pitch=1.5, length=8) {
       Your model, centered at origin in x, y, and z
 }
 ```
-or
+or, for the top.  You need to rotate this portion in X or Y and position it on the bed
 ```
+translate([0,0,-MODEL_HEIGHT])
+rotate([180,0,0])
 split(half="top",diameter=14, pitch=1.5, length=8) {
     Your model again
 }
