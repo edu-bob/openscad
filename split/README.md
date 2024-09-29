@@ -22,13 +22,17 @@ The threaded portion is centered on [0,0] on the XY plane and extends in the Z p
    
 ### Other
 See the split_test module below for an example of how to use.
-```split(half="bottom", diameter=14, pitch=1.5, length=8) {
+```
+split(half="bottom", diameter=14, pitch=1.5, length=8) {
       Your model, centered at origin in x, y, and z
-}'''
+}
+'''
 or
-```split(half="top",diameter=14, pitch=1.5, length=8) {
+```
+split(half="top",diameter=14, pitch=1.5, length=8) {
     Your model again
-}```
+}
+```
 
 The halves of the split model are left oriented just as they were in the full model
 
